@@ -2,8 +2,6 @@
 //
 
 #include <iostream>
-#include <stdlib.h>
-#include <time.h>
 #include "Task1.h"
 #include "Task2.h"
 using namespace std;
@@ -71,25 +69,56 @@ void MainMenuTask1()
     } while (select != 0);
 }
 
+void Task2Char()
+{
+    int size = 0;
+    cout << "Input size: ";
+    cin >> size;
+    char* arr{ new char[size] };
+
+    cout << "Input array:" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Input [ " << i + 1 << " ] element: ";
+        cin >> arr[i];
+    }
+
+    cout << "\t \t \t Before sort: " << endl;
+    for (int i = 0; i < size; i++)
+        cout << arr[i] << "\t";
+    cout << endl << endl;
+    insertSort(arr, size);
+
+    cout << "\t \t \t After sort: " << endl;
+    for (int i = 0; i < size; i++) 
+        cout << arr[i] << "\t";
+    cout << endl << endl;
+}
 void Task2AllType()
 {
-    srand(time(NULL));
-    const long SIZE = 10;
-    int arr[SIZE];
+    int size = 0;
+    cout << "Input size: ";
+    cin >> size;
+    double* arr{ new double[size] };
 
-    // до сортировки
-    for (int i = 0; i < SIZE; i++) {
-        arr[i] = rand() % 100;
-        cout << arr[i] << "\t";
+    cout << "Input array:" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Input [ " << i + 1 << " ] element: ";
+        cin >> arr[i];
     }
-    cout << "\n\n";
-    insertSort(arr, SIZE);
 
-    // после сортировки
-    for (int i = 0; i < SIZE; i++) {
+    cout << "\t \t \t Before sort: " << endl;
+    for (int i = 0; i < size; i++)
         cout << arr[i] << "\t";
-    }
-    cout << "\n\n";
+
+    cout << endl << endl;
+    insertSort(arr, size);
+
+    cout << "\t \t \t After sort: " << endl;
+    for (int i = 0; i < size; i++) 
+        cout << arr[i] << "\t";
+    cout << endl << endl;
 }
 void MainMenuTask2()
 {
@@ -111,7 +140,7 @@ void MainMenuTask2()
             break;
         case 2:
             system("cls");
-            //Task1Char();
+            Task2Char();
             break;
         default:
             system("cls");
