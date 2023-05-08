@@ -1,0 +1,7 @@
+﻿  lab7C++.cpp
+C:\Users\User\source\repos\lab7C++\lab7C++\lab7C++.cpp(22,14): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=double
+          ]
+C:\Users\User\source\repos\lab7C++\lab7C++\Task1.h(22): error C4716: minElementchar: должна возвращать значение
