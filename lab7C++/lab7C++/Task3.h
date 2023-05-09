@@ -1,7 +1,8 @@
 #pragma once
 using namespace std;
 template <class T>
-class LinkedListNode {
+class LinkedListNode
+{
 public:
     T data;
     LinkedListNode* next; //вказівник на наступний елемент
@@ -16,7 +17,8 @@ public:
 };
 
 template <class T>
-class LinkedList {
+class LinkedList 
+{
 private:
     LinkedListNode<T>* head; //вказівник на початок
     LinkedListNode<T>* tail; //вказівник на кінець

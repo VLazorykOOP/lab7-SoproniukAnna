@@ -5,6 +5,7 @@
 #include "Task1.h"
 #include "Task2.h"
 #include "Task3.h"
+#include "Task4.h"
 using namespace std;
 
 void Task1Char()
@@ -197,6 +198,20 @@ void MainMenuTask3()
 
 }
 
+void MainMenuTask4()
+{
+    LinkedList<int> list;
+    
+    List<int> lst;
+    lst.add(5);
+    lst.add(2);
+    lst.add(8);
+
+    for (auto it = lst.begin(); it != lst.end(); ++it)
+        cout << *it << "\t";
+    cout << endl;
+}
+
 void MainMenu()
 {
     int select = 0;
@@ -227,6 +242,7 @@ void MainMenu()
             break;
         case 4:
             system("cls");
+            MainMenuTask4();
             break;
         default:
             system("cls");
