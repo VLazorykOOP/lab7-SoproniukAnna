@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Task1.h"
 #include "Task2.h"
+#include "Task3.h"
 using namespace std;
 
 void Task1Char()
@@ -149,6 +150,53 @@ void MainMenuTask2()
     } while (select != 0);
 }
 
+void MainMenuTask3()
+{
+    LinkedList<int> list;
+    int select;
+    int elem, index;
+
+    do
+    {
+        cout << "1. Add element" << endl;
+        cout << "2. Index" << endl;
+        cout << "3. Print list" << endl;
+        cout << "0. Exit" << endl;
+        cout << "Select options: ";
+        cin >> select;
+
+        system("cls");
+        switch (select) {
+        case 1:
+            system("cls");
+            cout << "Enter element: ";
+            cin >> elem;
+            list.add(elem);
+            cout << endl;
+            break;
+        case 2:
+            system("cls");
+            cout << "Input index(Begin from 0): ";
+            cin >> index;
+            cout << list.getIndex(index);
+            cout << endl;
+            break;
+        case 3:
+            system("cls");
+            cout << "Size: " << list.getSize() << endl;
+            cout << "List elements: \t \t \t" << endl;
+            for (int i = 0; i < list.getSize(); i++)
+                cout << list.getIndex(i) << "\t";
+            cout << endl << endl;
+            break;
+        default:
+            system("cls");
+            break;
+        }
+    } while (select != 0);
+
+}
+
 void MainMenu()
 {
     int select = 0;
@@ -175,6 +223,7 @@ void MainMenu()
             break;
         case 3:
             system("cls");
+            MainMenuTask3();
             break;
         case 4:
             system("cls");

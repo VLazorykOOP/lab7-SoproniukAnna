@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-template <class T>
+template <typename T>
 void insertSort(T arr[], int size)
 {
 	T x;
